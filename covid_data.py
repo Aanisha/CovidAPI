@@ -2,7 +2,7 @@
 # importing libraries 
 from bs4 import beautifulsoup4 as BS 
 import requests 
-from flask import Flask, jsonify,abort
+from flask import Flask, jsonify
 
 app = Flask(__name__)
   
@@ -59,9 +59,7 @@ def corona_country(country_name):
     if(country_name=="UAE" or country_name=="United Arab Emirates"):
         country_name="united-arab-emirates"
     ans=getinfo(country_name)
-    if(ans['Total Cases']==0):
-
-        abort(404)
+    
 
     return jsonify(ans)
 

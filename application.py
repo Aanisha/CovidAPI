@@ -118,7 +118,7 @@ def facts():
          '7':'Follow the directions of your local health authority.'}
     return jsonify(ans)
   
-@app.route('/safetyfacts', methods=['GET'])
+@app.route('/symptoms', methods=['GET'])
 def facts():
     ans={'common-symptoms':{'fever','tiredness','dry cough'},'Additional Symptoms':{'aches and pains','nasal congestion','runny nose','sore throat','diarrhoea'}}
     return jsonify(ans)

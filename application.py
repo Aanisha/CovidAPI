@@ -49,7 +49,7 @@ def getinfo(country_name):
     return ans 
    
 
-@app.route('/covidapi/<string:country_name>', methods=['GET'])
+@app.route('/<string:country_name>', methods=['GET'])
 def corona_country(country_name):
 
     if(country_name=="USA" or country_name=="UnitedStates"):
@@ -97,7 +97,7 @@ def get_info(url):
       
     # returnng the dictionary 
     return ans 
-@app.route('/covidapi/all', methods=['GET'])
+@app.route('/all', methods=['GET'])
 def corona(): 
 # url of the corona virus cases 
     url = "https://www.worldometers.info/coronavirus/"
@@ -107,7 +107,16 @@ def corona():
   
 # printing the ans 
     return jsonify(ans)
-
+@app.route('/safetyfacts', methods=['GET'])
+def facts():
+    ans={'1':'Clean your hands often. Use soap and water, or an alcohol-based hand rub.',
+         '2':'Maintain a safe distance from anyone who is coughing or sneezing.',
+         '3':'Don’t touch your eyes, nose or mouth.',
+         '4':'Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.',
+         '5':'Stay home if you feel unwell.',
+         '6':'If you have a fever, a cough, and difficulty breathing, seek medical attention. Call in advance.',
+         '7':'Follow the directions of your local health authority.'}
+    return jsonify(ans)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)

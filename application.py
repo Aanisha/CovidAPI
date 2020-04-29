@@ -117,6 +117,11 @@ def facts():
          '6':'If you have a fever, a cough, and difficulty breathing, seek medical attention. Call in advance.',
          '7':'Follow the directions of your local health authority.'}
     return jsonify(ans)
+  
+@app.route('/safetyfacts', methods=['GET'])
+def facts():
+    ans={'common-symptoms':{'fever','tiredness','dry cough'},'Additional Symptoms':{'aches and pains','nasal congestion','runny nose','sore throat','diarrhoea'}}
+    return jsonify(ans)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)

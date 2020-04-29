@@ -1,5 +1,5 @@
 # importing libraries 
-from bs4 import beautifulsoup4 as BS 
+from bs4 import BeautifulSoup as BS 
 import requests 
 from flask import Flask, jsonify
 

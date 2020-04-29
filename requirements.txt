@@ -4,3 +4,4 @@ Flask
 jsonify
 uwsgi
 gunicorn
+CORS

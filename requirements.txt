@@ -3,5 +3,4 @@ requests
 Flask
 jsonify
 uwsgi
-gunicorn
 flask-cors

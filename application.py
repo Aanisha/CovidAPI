@@ -120,7 +120,7 @@ def facts():
   
 @app.route('/symptoms', methods=['GET'])
 def symptoms():
-    ans={'common-symptoms':{'fever','tiredness','dry cough'},'Additional Symptoms':{'aches and pains','nasal congestion','runny nose','sore throat','diarrhoea'}}
+    ans={'common-symptoms':['fever','tiredness','dry cough'],'Additional Symptoms':['aches and pains','nasal congestion','runny nose','sore throat','diarrhoea']}
     return jsonify(ans)
 
 if __name__ == '__main__':

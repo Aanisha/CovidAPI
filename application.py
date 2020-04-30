@@ -119,7 +119,7 @@ def facts():
     return jsonify(ans)
   
 @app.route('/symptoms', methods=['GET'])
-def facts():
+def symptoms():
     ans={'common-symptoms':{'fever','tiredness','dry cough'},'Additional Symptoms':{'aches and pains','nasal congestion','runny nose','sore throat','diarrhoea'}}
     return jsonify(ans)
 
